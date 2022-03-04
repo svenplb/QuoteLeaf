@@ -51,7 +51,7 @@ window.onload = function () {
     "and",
     "a",
     "to",
-    "in", 
+    "in",
     "is",
     "you",
     "that",
@@ -240,7 +240,7 @@ function corinc(e) {
 
   // Vergleich ob alles geschrieben
   if (text == quote) {
-    count = quote.split(" ").length;  
+    count = quote.split(" ").length;
 
     if (seconds > 0) {
       wpm = (count / (seconds + 1)) * 60;
@@ -267,9 +267,16 @@ function numberofwords(number) {
 
 function themes() {
   Themes_container.style = "display:block;";
+  SettingsArea.style = "display:none";
+}
+function about() {
+  About_container.style = "display:block;";
+  SettingsArea.style = "display:none";
 }
 function closethemes() {
+  About_container.style = "display:none";
   Themes_container.style = "display:none;";
+  SettingsArea.style = "display: block";
 }
 function settings() {}
 function guide() {

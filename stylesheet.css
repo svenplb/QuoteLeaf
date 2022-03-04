@@ -34,6 +34,7 @@
       background-blend-mode: var(--bgbm);
       overflow: hidden;
       word-spacing: 3px;
+      
     
       
     }
@@ -168,7 +169,7 @@
       display: flex;
       padding: 20px;
     }
-    #Themes_container{
+    #Themes_container, #About_container{
       background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
       background-blend-mode: overlay, lighten, overlay, color-burn, normal;
       height:100%; 
@@ -180,6 +181,9 @@
       overflow-x: hidden;
       transition: 0.5s;
       text-align: center;
+    }
+    #About_container{
+      text-align: left;
     }
     section{
       display: flex;
@@ -254,8 +258,8 @@
       background-blend-mode: color-dodge, overlay, difference, normal;
     }
     #Themes_Horizon{
-      background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;
-      color: rgb(255, 255, 255);
+      background-color: white;
+      color: rgb(0, 0, 0);
     }
     #Themes_Mountains{
       background-color: #FFF8C0;
@@ -269,34 +273,10 @@
     background-attachment: fixed;
     background-size: cover;
     }
-    .Settings__Dropdown{
-      place-content: center;
+    .has-dropdown{
       position: absolute;
-      width: 700px;
-      height: 250px;
-      background-color: white;
-      opacity: 0;
-    +  display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: 3rem;
-      margin-top: 2rem;
-      padding: 0.25rem;
-    
-      box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5rem;
-      transform: translate(-40%);
-    
-      transition: opacity .15s ease-out;
-    }
-    .has-dropdown:focus-within .Settings__Dropdown{
-      opacity: 1;
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .Settings__Button{
-      font-size: 20px;
-      color: black;
-    
+      right: 0;
+      top: 0;
     }
     li{
       list-style: none;
@@ -319,4 +299,29 @@
       --bgimg: var(--LinkBackgroundImage);
       --bgcolor: var(--LinkBackgroundColor);
       --text: var(--linktextcolor);
+    }
+    #SettingsArea{
+      z-index:10;
+      position: absolute;
+      display: flex;
+      top:  20px;
+      right: 20px;
+      border-radius: 20px;
+      /* Glassmorphism */
+      background: rgba(255, 255, 255, 0);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(12.5px);
+      -webkit-backdrop-filter: blur(12.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .Settings__Button{
+      color: black;
+      font-size: 1.4rem;
+    }
+    h3{
+      font-size: 2rem;
+    }
+    .heading{
+      margin-bottom: 0px;
     }
