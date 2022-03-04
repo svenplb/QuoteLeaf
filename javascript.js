@@ -275,13 +275,19 @@ function themes() {
   Themes_container.style = "display:block;";
   SettingsArea.style = "display:none";
 }
-function about() {
-  About_container.style = "display:block;";
+function Info() {
+  Info_container.style = "display:block;";
+  SettingsArea.style = "display:none";
+}
+function Ranking() {
+  Ranking_container.style = "display:block;";
   SettingsArea.style = "display:none";
 }
 function closethemes() {
-  About_container.style = "display:none";
+  Info_container.style = "display:none";
   Themes_container.style = "display:none;";
+  Ranking_container.style = "display:none;";
+
   SettingsArea.style = "display: block";
 }
 function settings() {}

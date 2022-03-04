@@ -8,15 +8,16 @@
 
   <!-- Documents -->
   <link rel="stylesheet" href="stylesheet.css" />
-
   <script src="javascript.js"></script>
-
-  <!-- Google Fonts -->
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/f766378459.js" crossorigin="anonymous"></script>
+<!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=Poppins:wght@300&display=swap"
     rel="stylesheet" />
-
+<!-- Favicon -->
+<link rel="icon" type="/images/QuoteLeaf.png" href="/images/QuoteLeaf.png">
 </head>
 
 
@@ -45,9 +46,9 @@
         autofocus autocomplete="off" />
     </div>
     <div id="footer">
-      <button onclick="about()">about</button>
-      <button onclick="themes()">themes</button>
-      <button><a>Settings</a></button>
+      <button onclick="Info()">Info</button>
+      <button onclick="themes()">Themes</button>
+      <button onclick="Ranking()">Ranking</button>
       </ul>
       </li>
     </div>
@@ -80,32 +81,62 @@
           <div class="themes_box" id="Themes_Horizon">Minimal</div>
           <div class="themes_box" id="Themes_Mountains">Mountains</div>
         </div>
+        <p>Coming soon👀</p>
       </section>
 
     </div>
   </div>
 
-  <div id="About_container">
+  <div id="Info_container">
 
-    <div id="About_Page">
+    <div id="Info_Page">
       <section>
         <button id="goback" onclick="closethemes()">↶</button>
-        <h1 class="heading">About</h1>
-        <p>QuoteLeaf is a simple, minimalistic typing test, featuring themes, a ranking system (soon👀) & word settings.
+        <h1 >QuoteLeaf Info</h1>
+        <h3 class="heading">About</h3>
+        <p>QuoteLeaf is a simple, minimalistic typing test, featuring word settings, themes & a ranking system (soon👀).
           <br> This website uses the top 100 most used words in the English language to generate its tests. <br> You can
           use <kbd>tab</kbd> to restart the typing test while typing or at the result of the test. After
           completing a test you will be able to see your wpm.<br> Wpm stands for words per minute
           <br>
         </p>
-
-        <h3 class="heading">Support</h3>
+        <h3 class="heading">Changelog</h3>
+        <p>Last update: 4th of March 2022</p>
+        <li>- Fixed word settings button</li>
+        <li>- Fixed copy+paste bug</li>
+        <li>- Fixed Logo bug</li>
+        <li>- Added info page</li>
+        <li>- Added ranking button (coming soon👀)</li>
+        <li>- Added favicon</li>
+        <li>- Made font size of the  50 words test smaller</li>
+        <h3 class="heading">Future features</h3>
+          <p>Things that are currently being worked on:</p>
+           <li>- Ranking</li>
+          <li>- Themes</li>
+          <li>- Making QuoteLeaf responsive for all devices</li>
+          <li>- Custom word settings</li>
+      
+        <h3 class="heading">Contact</h3>
         <p>If you notice a bug or have ideas for the website, you can send me an email or join the QuoteLeaf discord
           server.</p>
-          <a href="">Discord</a>
-          <a href="">Mail</a>
+          <div id="Info_Buttons">
+            <a href="https://discord.gg/" class="Info_Button"><i class="fa-brands fa-discord"></i><span class="Info_Button_Text">Discord</span> </a>
+            <a href="https://twitter.com/ThinkingSven" class="Info_Button"><i class="fa-brands fa-twitter"></i><span class="Info_Button_Text">Twitter</span></a>
+          </div>
       </section>
     </div>
 
+    
+    </div>
+    <div id="Ranking_container">
+      <div id="Ranking_page">
+        <section>
+          <button id="goback" onclick="closethemes()">↶</button>
+           <h1>Coming soon👀</h1>          
+               <p>Join the discord for updates:</p>
+        </section>
+  
+      </div>
 </body>
 
 </html>
