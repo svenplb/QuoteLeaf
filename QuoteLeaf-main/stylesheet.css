@@ -1,0 +1,327 @@
+:root{
+
+    /* QuoteLeaf */
+      --QuoteLeafBackground: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
+      --QuoteLeafBGBM: overlay, lighten, overlay, color-burn, normal;
+      --Quoteleafcorrect-color: green;
+      --Quoteleafincorrect-color: red;
+      --Quoteleaftext-color: white;
+      --QuoteleafbackgroundImage: none;
+      --QuoteLeafbackgroundcolor: none;
+    
+      /* Link */
+      
+      --LinkBackground: #330033;
+      --LinkBackgroundImage:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='5.7'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='16'/%3E%3Ccircle cx='539' cy='269' r='16'/%3E%3Ccircle cx='603' cy='493' r='16'/%3E%3Ccircle cx='731' cy='737' r='16'/%3E%3Ccircle cx='520' cy='660' r='16'/%3E%3Ccircle cx='309' cy='538' r='16'/%3E%3Ccircle cx='295' cy='764' r='16'/%3E%3Ccircle cx='40' cy='599' r='16'/%3E%3Ccircle cx='102' cy='382' r='16'/%3E%3Ccircle cx='127' cy='80' r='16'/%3E%3Ccircle cx='370' cy='105' r='16'/%3E%3Ccircle cx='578' cy='42' r='16'/%3E%3Ccircle cx='237' cy='261' r='16'/%3E%3Ccircle cx='390' cy='382' r='16'/%3E%3C/g%3E%3C/svg%3E");
+      --LinkBGM: none;
+      --linkcorrect-color: #000000;
+      --linkincorrect-color: #020101;
+      --linktextcolor: #474056;
+      
+    }
+    
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      font-size: 2rem;
+      font-weight: 600;
+      
+      background-image: var(--bgimg);
+      background: var(--bg);
+      background-blend-mode: var(--bgbm);
+      overflow: hidden;
+      word-spacing: 3px;
+      
+    
+      
+    }
+    #grid{
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      place-items: center;
+    }
+    .container {
+      place-items: center;
+      width: 1000px;
+      padding: 25px;
+      margin: 300px;
+    
+      border-radius: 20px;
+      background-color: white;
+      color: #ffffff;
+      /* Glassmorphism */
+      background: rgba(255, 255, 255, 0);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(12.5px);
+      -webkit-backdrop-filter: blur(12.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .textfield {
+      width: 950px;
+      height: 40px;
+      resize: none;
+    
+      margin-top: 50px;
+      margin-bottom: 40px;
+    
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+    
+      font-size: 2rem;
+      outline: none;
+      vertical-align: middle;
+      color: #090b09;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+    }
+    
+    .timer {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      font-family: "Poppins", sans-serif;
+    }
+    
+    ::selection {
+      color: #0b0d0b;
+      background: #0dc23a;
+    }
+    
+    #Logo {
+      position: absolute;
+      padding: 20px;
+      margin-left: 0;
+    }
+    
+    .card_container {
+      position: fixed; 
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    
+      z-index: 2; 
+      display: none;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+    }
+    #card {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1rem;
+      background: white;
+      width: 500px;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      overflow: visible;
+    }
+    p {
+      opacity: 70%;
+      font-weight: 200;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    
+    button {
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      height: 70px;
+      width: 200px;
+      border-radius: 20px;
+      margin: 10px;
+      transition: 0.5s;
+      outline: none;
+      background: none;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      letter-spacing: 3px;
+      
+    }
+    button:hover {
+      background: white;
+      opacity: 20%;
+    }
+    
+    .quotedisplay {
+      -moz-user-select: -moz-none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    #footer{
+      position: absolute;
+      bottom: 0px;
+      display: flex;
+      padding: 20px;
+    }
+    #Themes_container, #About_container{
+      background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
+      background-blend-mode: overlay, lighten, overlay, color-burn, normal;
+      height:100%; 
+      width:100%;
+      color: white;
+      position: relative;
+      overflow: scroll;
+      display: none;
+      overflow-x: hidden;
+      transition: 0.5s;
+      text-align: center;
+    }
+    #About_container{
+      text-align: left;
+    }
+    section{
+      display: flex;
+      flex-direction: column;
+      margin: 100px 20vw;
+    }
+    .themes_box{
+      display: grid;
+      place-content: center;
+      width: 350px;
+      height: 150px;
+      margin: 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 00.5s;
+    }
+    .themes_box:hover{
+      font-size: 2.2rem;
+    }
+    
+    #goback{
+      display: grid;
+      place-content: center;
+      position: absolute;
+      background: green;
+      border-radius: 100px;
+      width: 100px;
+      height: 100px;
+      bottom: 0px;
+      right: 0px;
+      margin: 40px;
+      font-size: 3rem;
+    
+    }
+    
+    #Themes_container{
+      overflow: hidden;
+      transition: 500ms ease-in-out;
+    }
+    #themes_grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-content: center;
+      place-items: center;
+    }
+    #Themes_QuoteLeaf{
+      background: linear-gradient(235deg, #BABC4A 0%, #000000 100%), linear-gradient(235deg, #0026AC 0%, #282534 100%), linear-gradient(235deg, #00FFD1 0%, #000000 100%), radial-gradient(120% 185% at 25% -25%, #EEEEEE 0%, #EEEEEE 40%, #7971EA calc(40% + 1px), #7971EA 50%, #393E46 calc(50% + 1px), #393E46 70%, #222831 calc(70% + 1px), #222831 100%), radial-gradient(70% 140% at 90% 10%, #F5F5C6 0%, #F5F5C6 30%, #7DA87B calc(30% + 1px), #7DA87B 60%, #326765 calc(60% + 1px), #326765 80%, #27253D calc(80% + 1px), #27253D 100%);
+      background-blend-mode: overlay, lighten, overlay, color-burn, normal;
+    }
+    #Themes_Link{
+      background-color: #330033;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='5.7'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='16'/%3E%3Ccircle cx='539' cy='269' r='16'/%3E%3Ccircle cx='603' cy='493' r='16'/%3E%3Ccircle cx='731' cy='737' r='16'/%3E%3Ccircle cx='520' cy='660' r='16'/%3E%3Ccircle cx='309' cy='538' r='16'/%3E%3Ccircle cx='295' cy='764' r='16'/%3E%3Ccircle cx='40' cy='599' r='16'/%3E%3Ccircle cx='102' cy='382' r='16'/%3E%3Ccircle cx='127' cy='80' r='16'/%3E%3Ccircle cx='370' cy='105' r='16'/%3E%3Ccircle cx='578' cy='42' r='16'/%3E%3Ccircle cx='237' cy='261' r='16'/%3E%3Ccircle cx='390' cy='382' r='16'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    #Themes_Shadow{
+      background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    #Themes_Gradient{
+      background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+      background-blend-mode: color-dodge, overlay, difference, normal;
+    }
+    #Themes_X{
+      background: linear-gradient(235deg, #FFFFFF 0%, #000F25 100%), linear-gradient(180deg, #6100FF 0%, #000000 100%), linear-gradient(235deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%), linear-gradient(125deg, #FFA3AC 0%, #FFA3AC 40%, #00043C calc(40% + 1px), #00043C 60%, #005D6C calc(60% + 1px), #005D6C 70%, #00C9B1 calc(70% + 1px), #00C9B1 100%);
+    background-blend-mode: soft-light, screen, darken, normal;
+    }
+    #Themes_Cubes{
+      background-color: #487346;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%234c8e43' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%236aac5f' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%234c8e43' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%236aac5f' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%2389CC7C' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%23768c3a' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%2396ac58' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%23B6CC76' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%2396ac58' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%23768c3a' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%23B6CC76' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%23768c3a' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%23B6CC76' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%2396ac58' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%23B6CC76' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    #Themes_Gradient{
+      background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100FF 0%, #00FF57 100%), radial-gradient(100% 148.07% at 0% 0%, #FFF500 0%, #51D500 100%);
+      background-blend-mode: color-dodge, overlay, difference, normal;
+    }
+    #Themes_Horizon{
+      background-color: white;
+      color: rgb(0, 0, 0);
+    }
+    #Themes_Mountains{
+      background-color: #FFF8C0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23a6c5cc' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ffac0e' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2380b4ce' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffa00b' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%236d9ed2' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ff930c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%237683cc' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff8611' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%239162b7' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ff7817' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa348e' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ff6a1d' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+      background-attachment: fixed;
+      background: 0.5;
+    }
+    #Themes_Vortex{
+      background-color: #ff9d00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    .has-dropdown{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    li{
+      list-style: none;
+    }
+    .QuoteLeaf{
+      --bg: var(--QuoteLeafBackground);
+      --bgbm: var(--QuoteLeafBGBM);
+      --color: var(--Quoteleaftext-color);
+      --correct: var(--Quoteleafcorrect-color);
+      --incorrect: var(--Quoteleafincorrect-color);
+      --bgcolor: var(--QuoteLeafbackgroundcolor);
+      --text: var(--Quoteleaftext-color);
+    }
+    .Link{
+      --bg: var(--LinkBackground); 
+      --bgbm: var(--LinkBGM);
+      --color: var(--linktextcolor);
+      --incorrect: var(--linkincorrect-color);
+      --correct: var(--linkcorrect-color);
+      --bgimg: var(--LinkBackgroundImage);
+      --bgcolor: var(--LinkBackgroundColor);
+      --text: var(--linktextcolor);
+    }
+    #SettingsArea{
+      z-index:10;
+      position: absolute;
+      display: flex;
+      top:  20px;
+      right: 20px;
+      border-radius: 20px;
+      /* Glassmorphism */
+      background: rgba(255, 255, 255, 0);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(12.5px);
+      -webkit-backdrop-filter: blur(12.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .Settings__Button{
+      color: black;
+      font-size: 1.4rem;
+    }
+    h3{
+      font-size: 2rem;
+    }
+    .heading{
+      margin-bottom: 0px;
+    }

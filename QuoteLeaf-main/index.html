@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Top -->
+
+
+  <!-- Documents -->
+  <link rel="stylesheet" href="stylesheet.css" />
+
+  <script src="javascript.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=Poppins:wght@300&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+
+
+<body class="QuoteLeaf">
+
+
+  <img src="images/QuoteLeaf Logo.png" id="Logo" />
+
+
+
+
+  <!-- Typing area -->
+  <div id="grid">
+    <!-- Settings -->
+    <div id="SettingsArea">
+      <button class="Settings__Button" onclick="numberofwords(10)">10 Words</button>
+      <button class="Settings__Button" onclick="numberofwords(25)">25 Words</button>
+      <button class="Settings__Button" onclick="numberofwords(50)">50 Words</button>
+    </div>
+
+    <div class="container" id="container">
+      <div class="timer" id="timer">0</div>
+      <div class="quotedisplay" id="quotedisplay"></div>
+      <input onpaste="reset()" type="text" id="textfield" class="textfield" spellcheck="false" onkeydown="tabbed()"
+        autofocus autocomplete="off" />
+    </div>
+    <div id="footer">
+      <button onclick="about()">about</button>
+      <button onclick="themes()">themes</button>
+      <button><a>Settings</a></button>
+      </ul>
+      </li>
+    </div>
+  </div>
+
+  <!-- Result Card -->
+  <div class="card_container" id="card_container">
+    <div class="card" id="card">
+      <h1 id="card_wpm"></h1>
+      <p>press <kbd>tab</kbd> to repeat</p>
+    </div>
+  </div>
+  <!-- Themes Display -->
+  <title>QuoteLeaf</title>
+  </div>
+  </div>
+  <div id="Themes_container">
+    <div id="themes_page">
+      <section>
+        <button id="goback" onclick="closethemes()">↶</button>
+        <h1>Themes</h1>
+        <div id="themes_grid">
+          <div class="themes_box" id="Themes_QuoteLeaf">QuoteLeaf</div>
+          <div class="themes_box" id="Themes_Link">Link</div>
+          <div class="themes_box" id="Themes_Shadow">Shadow</div>
+          <div class="themes_box" id="Themes_X">X</div>
+          <div class="themes_box" id="Themes_Cubes">Cubes</div>
+          <div class="themes_box" id="Themes_Vortex">Vortex</div>
+          <div class="themes_box" id="Themes_Gradient">Gradient</div>
+          <div class="themes_box" id="Themes_Horizon">Minimal</div>
+          <div class="themes_box" id="Themes_Mountains">Mountains</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div id="About_container">
+
+    <div id="About_Page">
+      <section>
+        <button id="goback" onclick="closethemes()">↶</button>
+        <h1 class="heading">About</h1>
+        <p>QuoteLeaf is a simple, minimalistic typing test, featuring themes, a ranking system (soon👀) & word settings.
+          <br> This website uses the top 100 most used words in the English language to generate its tests. <br> You can
+          use tab to restart the typing test while typing or at the result of the test. After
+          completing a test you will be able to see your wpm.<br> Wpm stands for words per minute
+          <br>
+        </p>
+
+        <h3 class="heading">Support</h3>
+        <p>If you notice a bug or have ideas for the website, you can send me an email or join the QuoteLeaf discord
+          server.</p>
+
+      </section>
+    </div>
+
+</body>
+
+</html>
