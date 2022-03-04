@@ -260,6 +260,12 @@ function changetimer() {
 
 //word settings
 function numberofwords(number) {
+  if(number == 50) {
+    quotedisplay.style.fontSize = "1.8rem";
+  } else {
+    quotedisplay.style.fontSize = "2rem";
+  }
+
   wordamount = number;
   console.log();
   renderNew();

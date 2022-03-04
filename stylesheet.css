@@ -155,6 +155,9 @@
       background: white;
       opacity: 20%;
     }
+    h3{
+      font-size: 2rem;
+    }
     
     .quotedisplay {
       -moz-user-select: -moz-none;
@@ -281,25 +284,6 @@
     li{
       list-style: none;
     }
-    .QuoteLeaf{
-      --bg: var(--QuoteLeafBackground);
-      --bgbm: var(--QuoteLeafBGBM);
-      --color: var(--Quoteleaftext-color);
-      --correct: var(--Quoteleafcorrect-color);
-      --incorrect: var(--Quoteleafincorrect-color);
-      --bgcolor: var(--QuoteLeafbackgroundcolor);
-      --text: var(--Quoteleaftext-color);
-    }
-    .Link{
-      --bg: var(--LinkBackground); 
-      --bgbm: var(--LinkBGM);
-      --color: var(--linktextcolor);
-      --incorrect: var(--linkincorrect-color);
-      --correct: var(--linkcorrect-color);
-      --bgimg: var(--LinkBackgroundImage);
-      --bgcolor: var(--LinkBackgroundColor);
-      --text: var(--linktextcolor);
-    }
     #SettingsArea{
       z-index:10;
       position: absolute;
@@ -319,9 +303,27 @@
       color: black;
       font-size: 1.4rem;
     }
-    h3{
-      font-size: 2rem;
-    }
+    
     .heading{
       margin-bottom: 0px;
     }
+    .QuoteLeaf{
+      --bg: var(--QuoteLeafBackground);
+      --bgbm: var(--QuoteLeafBGBM);
+      --color: var(--Quoteleaftext-color);
+      --correct: var(--Quoteleafcorrect-color);
+      --incorrect: var(--Quoteleafincorrect-color);
+      --bgcolor: var(--QuoteLeafbackgroundcolor);
+      --text: var(--Quoteleaftext-color);
+    }
+    .Link{
+      --bg: var(--LinkBackground); 
+      --bgbm: var(--LinkBGM);
+      --color: var(--linktextcolor);
+      --incorrect: var(--linkincorrect-color);
+      --correct: var(--linkcorrect-color);
+      --bgimg: var(--LinkBackgroundImage);
+      --bgcolor: var(--LinkBackgroundColor);
+      --text: var(--linktextcolor);
+    }
+ 
