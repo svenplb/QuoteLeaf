@@ -336,6 +336,13 @@
     .Info_Button_Text{
       margin-left: 20px;
     }
+    #Ranking_Discord{
+      width: 300px;
+    }
+    #Ranking_page{
+      display: grid;
+      place-content: center;
+    }
     .QuoteLeaf{
       --bg: var(--QuoteLeafBackground);
       --bgbm: var(--QuoteLeafBGBM);
