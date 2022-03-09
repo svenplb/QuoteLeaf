@@ -9,6 +9,7 @@
   <!-- Documents -->
   <link rel="stylesheet" href="stylesheet.css" />
   <script src="javascript.js"></script>
+
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/f766378459.js" crossorigin="anonymous"></script>
 <!-- Google Fonts -->
@@ -23,8 +24,7 @@
 
 
 <body class="QuoteLeaf">
-
-
+  <div id="particles-js"></div>
   <img src="images/QuoteLeaf Logo.png" id="Logo" />
 
 
@@ -71,17 +71,16 @@
         <button id="goback" onclick="closethemes()">↶</button>
         <h1>Themes</h1>
         <div id="themes_grid">
-          <div class="themes_box" id="Themes_QuoteLeaf">QuoteLeaf</div>
-          <div class="themes_box" id="Themes_Link">Link</div>
-          <div class="themes_box" id="Themes_Shadow">Shadow</div>
-          <div class="themes_box" id="Themes_X">X</div>
-          <div class="themes_box" id="Themes_Cubes">Cubes</div>
-          <div class="themes_box" id="Themes_Vortex">Vortex</div>
-          <div class="themes_box" id="Themes_Gradient">Gradient</div>
-          <div class="themes_box" id="Themes_Horizon">Minimal</div>
-          <div class="themes_box" id="Themes_Mountains">Mountains</div>
+          <div class="themes_box" id="Themes_QuoteLeaf" onclick="Theme_QuoteLeaf()">QuoteLeaf</div>
+          <div class="themes_box" id="Themes_Link" onclick="Theme_Link()">Particles</div>
+          <div class="themes_box" id="Themes_Shadow" onclick="Theme_Shadow()">Shadow</div>
+          <div class="themes_box" id="Themes_Gradient" onclick="Theme_Gradient()">Sky</div>
+          <div class="themes_box" id="Themes_X" onclick="Theme_X()">Wave check</div>
+          <div class="themes_box" id="Themes_Cubes" onclick="Theme_Cubes()">Cubes</div>
+          <div class="themes_box" id="Themes_Vortex" onclick="Theme_Vortex()">Vortex</div>
+          <div class="themes_box" id="Themes_Minimal" onclick="Theme_Minimal()">Adrian</div>
+          <div class="themes_box" id="Themes_Mountains" onclick="Theme_Mountains()">Mountains</div>
         </div>
-        <p>Coming soon👀</p>
       </section>
 
     </div>
@@ -141,6 +140,8 @@
         </section>
   
       </div>
+      <script src="/particles.js"></script>
+      <script src="/app.js"></script>
 </body>
 
 </html>

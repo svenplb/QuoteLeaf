@@ -1,5 +1,6 @@
 // Variables
 const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
+let body;
 let timer;
 let container;
 let quotedisplay;
@@ -23,7 +24,11 @@ let sentence;
 
 let wordlist;
 let wordamount;
+// Themes
 
+let Themes_QuoteLeaf_Button;
+let Themes_Link_Button;
+let Themes_Selected;
 // Value after loaded window
 window.onload = function () {
   timer = document.getElementById("timer");
@@ -44,7 +49,12 @@ window.onload = function () {
   i = 0;
   word = null;
   sentence = "";
-
+  // Themes
+  Themes_Selected = "QuoteLeaf"
+  Themes_QuoteLeaf_Button = document.getElementById("Themes_QuoteLeaf");
+  Themes_Link_Button = document.getElementById("Themes_Link"); 
+  body = document.body
+  // Wordlist
   wordlist = [
     "the",
     "of",
@@ -154,12 +164,21 @@ window.onload = function () {
 
 // Generate random quote
 function getRandomQuote() {
-  let sentence = "";
-  for (i = 0; i <= wordamount; i++) {
-    word = wordlist[Math.floor(Math.random() * wordlist.length)];
-    sentence = sentence + word + " ";
+  if(wordamount == 10 || wordamount == 25 || wordamount == 50) {
+    let sentence = "";
+    for (i = 0; i <= wordamount; i++) {
+      word = wordlist[Math.floor(Math.random() * wordlist.length)];
+      if(i>0){
+        sentence = sentence + " "+ word;
+      }else{
+        sentence = sentence + word;
+      }
+      
+    }
+    return sentence;
+   
   }
-  return sentence;
+  return "";
 }
 
 // Render new quote
@@ -186,7 +205,7 @@ function tabbed() {
     textfield.focus();
     seconds = 0;
     timeanzeige.innerHTML = seconds + "s";
-    textfield.style.background = "rgba(255, 255, 255, 0.75)";
+    textfield.style.background = "var(--textfield)";
     overlay.style = "display:none;";
   }
 }
@@ -197,7 +216,7 @@ function reset() {
   textfield.focus();
   seconds = 0;
   timeanzeige.innerHTML = seconds + "s";
-  textfield.style.background = "rgba(255, 255, 255, 0.75)";
+  textfield.style.background = "var(--textfield)";
 }
 
 // Function event listener
@@ -219,14 +238,14 @@ function corinc(e) {
         const characterSpan = document.createElement("span");
         characterSpan.innerText = quote[i];
         quotedisplay.appendChild(characterSpan);
-        characterSpan.style = "color:var(--correct)";
-        textfield.style.background = "rgba(255, 255, 255, 0.75)";
+        characterSpan.style.color = "var(--correct)";
+        textfield.style.background = "var(--textfield)";
       } else {
         // Falsch, wenn char nicht gleich ist
         const characterSpan = document.createElement("span");
         characterSpan.innerText = quote[i];
         characterSpan.style = "color:var(--incorrect)";
-        textfield.style.background = "rgba(255, 78, 78, 0.75)";
+        textfield.style.background = "#f47174";
         quotedisplay.appendChild(characterSpan);
       }
     } else {
@@ -240,7 +259,7 @@ function corinc(e) {
 
   // Vergleich ob alles geschrieben
   if (text == quote) {
-    count = quote.split(" ").length;
+    count = quote.split(" ").length + 1;
 
     if (seconds > 0) {
       wpm = (count / (seconds + 1)) * 60;
@@ -294,3 +313,78 @@ function settings() {}
 function guide() {
   window.open("/guide.html");
 }
+// Themes
+function Theme_QuoteLeaf() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("QuoteLeaf");
+  Themes_Selected = "QuoteLeaf";
+  document.getElementById("particles-js").style.display = "none";
+
+}
+function Theme_Link(){
+
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Link");
+  document.getElementById("particles-js").style.display = "block";
+  Themes_Selected = "Link";
+  document.getElementById("Logo").style.display = "none"
+
+
+}
+function Theme_Minimal() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Minimal");
+  Themes_Selected = "Minimal";
+  document.getElementById("Logo").style.display = "none"
+  document.getElementById("particles-js").style.display = "none";
+
+}
+function Theme_Gradient() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Gradient");
+  Themes_Selected = "Gradient";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+
+
+}
+function Theme_Vortex() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Vortex");
+  Themes_Selected = "Vortex";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+
+}
+function Theme_Shadow() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Shadow");
+  Themes_Selected = "Shadow";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+}
+function Theme_Cubes() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Cubes");
+  Themes_Selected = "Cubes";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+}
+  
+function Theme_Mountains() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("Mountains");
+  console.log(body.classList);
+  Themes_Selected = "Mountains";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+}
+  
+function Theme_X() {
+  body.classList.remove(Themes_Selected);
+  body.classList.add("X");
+  Themes_Selected = "X";
+  document.getElementById("particles-js").style.display = "none";
+  document.getElementById("Logo").style.display = "none"
+}
+  
