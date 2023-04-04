@@ -5,10 +5,6 @@ QuoteLeaf is a simple, minimalistic speed typing test with themes and word setti
 ![Screenshot 2022-05-21 204329](https://user-images.githubusercontent.com/97550617/169665197-90c2f7be-3101-480b-b4b8-fe595f1c9d55.png)
 
 
+This website uses the top 100 most commonly used words in the English language to generate its typing tests. To restart the test while typing or after completing it, simply press the tab key. To finish the test, type the last word and press the spacebar. Once you have completed the test, your typing speed will be displayed in words per minute (wpm).
 
-This website uses the top 100 most used words in the English language to generate its tests.
-You can use tab to restart the typing test while typing or at the result of the test. To finish the test, press space at the end of the last word. After completing a test you will be able to see your wpm.
-
-The theme backgrounds are from:
-https://gradienta.io/ & https://www.svgbackgrounds.com/
-
+The theme backgrounds used on this website are sourced from https://gradienta.io/ and https://www.svgbackgrounds.com/.
